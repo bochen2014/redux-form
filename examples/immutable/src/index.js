@@ -40,7 +40,7 @@ let render = () => {
 
         <h2>Form</h2>
 
-        <ImmutableForm onSubmit={showResults}/>
+        <ImmutableForm /*onSubmit={showResults}*/ />
 
         <Values form="immutableExample"/>
 

@@ -5,8 +5,7 @@
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "lint": "eslint src",
-    "start": "node devServer.js",
-    "prepublish": "npm run lint && npm run build"
+    "start": "node devServer.js"
   },
   "dependencies": {
     "babel-polyfill": "^6.6.1",
@@ -18,7 +17,7 @@
     "react-dom": "^15.3.1",
     "react-redux": "^4.4.1",
     "redux": "^3.3.1",
-    "redux-form": "file:../../",
+    "redux-form": "^6.0.2",
     "redux-form-website-template": "0.0.35"
   },
   "devDependencies": {
@@ -37,6 +36,7 @@
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "redbox-react": "^1.2.2",
+    "redux-immutable": "^3.0.8",
     "rimraf": "^2.4.3",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",

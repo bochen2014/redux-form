@@ -5,8 +5,8 @@
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "lint": "eslint src",
-    "start": "node devServer.js",
-    "prepublish": "npm run lint && npm run build"
+    "start": "node devServer.js"
+    
   },
   "dependencies": {
     "babel-polyfill": "^6.7.4",
@@ -19,7 +19,7 @@
     "react-dom": "^15.3.1",
     "react-redux": "^4.4.2",
     "redux": "^3.4.0",
-    "redux-form": "file:../../",
+     "redux-form": "^6.0.2",
     "redux-form-website-template": "0.0.35",
     "redux-immutablejs": "0.0.8"
   },

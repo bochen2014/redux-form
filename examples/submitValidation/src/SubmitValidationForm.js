@@ -12,8 +12,17 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
   </div>
 )
 
+const validate = values=>{
+  let errors ={}
+  if(!values.password){
+    errors.password = 'must provide a password'
+  }
+  return errors
+}
+
 const SubmitValidationForm = (props) => {
   const { error, handleSubmit, pristine, reset, submitting } = props
+  console.log(error)
   return (
     <form onSubmit={handleSubmit(submit)}>
       <Field name="username" type="text" component={renderField} label="Username"/>
@@ -28,5 +37,6 @@ const SubmitValidationForm = (props) => {
 }
 
 export default reduxForm({
-  form: 'submitValidation'  // a unique identifier for this form
+  form: 'submitValidation',  // a unique identifier for this form
+  validate
 })(SubmitValidationForm)
